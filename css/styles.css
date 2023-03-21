@@ -6,7 +6,7 @@
     --theme-navy: #1d344c;
     --theme-navy2: #1e454d;
     --theme-font: Kalam;
-    --font-xlarge: 3.5rem;
+    --font-xlarge: 4rem;
     --font-large: 3rem;
     --font-regular: 1.5rem;
     --font-small: 1rem;
@@ -38,11 +38,10 @@ h1{
   text-transform: uppercase;
   text-indent: .5em;
   letter-spacing: .1em;
-  font-style: italic;
   font-weight: bold;
   position: relative;
-  padding-bottom: 2rem;
-  top: 25%;
+  /* padding-bottom: 1.6rem; */
+  margin-top: 18%;
   left:45%;
   border-bottom: var(--theme-gold) 1.2rem solid;
 }
@@ -66,12 +65,13 @@ h2{
 }
 .intro{
   background-color: var(--theme-olive);
-  background-image: url(../images/logo2.png);
+  background-image: url(../images/newlogo.png);
   background-position: left top;
   background-repeat: no-repeat;
   background-size: auto 100%;
   width: 100vw;
   grid-column: start-point / end-point;
+  /* padding-left: 3rem; */
  }
 
  /* .intro > hr{
