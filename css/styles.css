@@ -17,19 +17,10 @@
     margin: 0;
 }
 
-/* body{
-    background-color: var(--theme-olive);
-    font-family: var(--theme-font);
-}
-
-header{
-    background-color: var(--theme-olive);
-    height: 300px;
-} */
 p{
   font-family: var(--theme-font), sans-serif;
   font-size: var(--font-regular);
-  
+  color: var(--theme-navy);
 }
 h1{
   font-size: var(--font-xlarge);
@@ -66,6 +57,18 @@ hr{
   width: 35%;
   margin: 1.5em auto;
   opacity: 0;
+}
+h3{
+  font-size: var(--font-regular);
+  color: var(--theme-navy);
+  font-family: var(--theme-font);
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: .15em;
+  font-style: italic;
+  font-weight: bold;
+  padding: 2rem 3rem 0rem;
+  text-align: center;
 }
 hr.intro-heading__top{
   animation: moveUp 1s ease-out 1.5s forwards;
@@ -107,10 +110,37 @@ hr.intro-heading__bottom{
 }
 
  .brief-cv{
-  background-color: var(--theme-gray);
+  background-color: var(--theme-gold);
   display: flex;
+  padding: 2rem 0 2rem 3rem;
   /* grid-column: start-point / end-point; */
  }
+.brief-cv-wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: var(--theme-olive);
+  border-top: .3rem solid var(--theme-navy);
+  border-left: .3rem solid var(--theme-navy);
+  border-bottom: .3rem solid var(--theme-navy);
+  border-radius: 50% 0% 0% 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.brief-cv-text{
+  /* flex-grow: 3; */
+}
+/* .brief-cv-pic{
+  border: .3rem solid var(--theme-navy2);
+  border-radius: 50%;
+} */
+.brief-cv-pic__photo{
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: .5rem .5rem;
+  border: .3rem solid var(--theme-navy2);
+  border-radius: 50%;
+}
 .portfolio-projects{
   display: flex;
   flex-wrap: wrap;
@@ -172,7 +202,6 @@ hr.intro-heading__bottom{
   text-align: center;
   text-decoration: none var(--theme-navy) solid;
   text-decoration-thickness: auto;
-  /* width: 100%; */
   max-width: 380px;
   margin: 0rem 4rem;
   position: relative;
@@ -202,12 +231,6 @@ hr.intro-heading__bottom{
   left: 2px;
 }
 
-@media (max-width: 768px) {
-  .intro-buttons > button {
-    padding: .75rem 3rem;
-    font-size: var(--font-small);
-  }
-}
 @keyframes fadeInLeft {
   0%
   {
@@ -265,5 +288,13 @@ hr.intro-heading__bottom{
   {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .intro-buttons > button {
+    padding: .75rem 3rem;
+    font-size: var(--font-small);
   }
 }
