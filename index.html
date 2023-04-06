@@ -22,24 +22,26 @@
 			<hr class="intro-heading__bottom">
 		</div>
 		<div class="intro-buttons">
-			<button class="intro-buttons__cv">About me</button>
-			<button class="intro-buttons__portfolio">Portfolio</button>
+			<button class="intro-buttons__cv" onclick="location.href='#cv'">About me</button>
+			<button class="intro-buttons__portfolio" onclick="location.href='#portfolio'">Portfolio</button>
 		</div>
 	</header>
-	<section class="brief-cv">
+	<section class="brief-cv" id="cv">
 		<div class="brief-cv-wrapper">
-			<!-- <div class="brief-cv-pic"> -->
-				<img src="images/photo.jpg" alt="" class="brief-cv-pic__photo">
-			<!-- </div> -->
+			<img src="images/photo.jpg" alt="" class="brief-cv-photo">
 			<div class="brief-cv-text">
 				<h3 class="brief-cv-text__heading">My CV header</h3>
 				<p class="brief-cv-text__profile">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 					Quod esse deserunt, est dignissimos vel recusandae repellat voluptatum enim, debitis 
 					quidem aspernatur sapiente perspiciatis ad dolor, eum earum veritatis voluptate beatae?</p>
+				<p class="brief-cv-text__profile">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					Quod esse deserunt, est dignissimos vel recusandae repellat voluptatum enim, debitis 
+					quidem aspernatur sapiente perspiciatis ad dolor, eum earum veritatis voluptate beatae?</p>
+				<p class="brief-cv-text__button"><button class="brief-cv-button" onclick="location.href='#cv'">Download CV</button></p>
 			</div>
 		</div>	
 	</section>
-	<section class="portfolio-projects">
+	<section class="portfolio-projects" id="portfolio">
 		<div class="portfolio-projects__heading">My projects</div>
 		<div class="portfolio-projects__grid">
 			<div class="project">
