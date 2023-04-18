@@ -10,7 +10,7 @@
     --font-xlarge: 3.5rem;
     --font-large: 2.5rem;
     --font-regular: 1.7rem;
-    --font-small: 1.2rem;
+    --font-small: 1rem;
 }
 *{
     box-sizing: border-box;
@@ -19,7 +19,7 @@
     font-family: var(--theme-font), sans-serif;
 }
 p{
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   color: var(--theme-navy);
 }
 h1{
@@ -151,7 +151,6 @@ hr.intro-heading__bottom{
 .brief-cv-wrapper{
   display: grid;
   grid-template-columns: minmax(250px,1fr) 3fr;
-  justify-items: stretch;
   align-items: center;
   height: auto;
   width: 100%;
@@ -178,7 +177,10 @@ hr.intro-heading__bottom{
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .brief-cv-text{
-  padding: .5rem 1.5rem;
+  padding: .5rem 1.5rem .5rem 0rem;
+}
+.brief-cv-text>p{
+  text-indent: 1rem;
 }
 .brief-cv-button {
   line-height: 1rem;
@@ -299,6 +301,7 @@ hr.intro-heading__bottom{
 .contacts__text p{
   margin: 0rem 0rem 1rem;
   text-align: center;
+  font-size: var(--font-regular);
 }
 .contacts__social{
   font-size: var(--font-xlarge);
@@ -323,13 +326,16 @@ i.fa-linkedin{
 div.contacts__social:nth-of-type(2){
   --fa-animation-duration: 8s;
 }
- footer{
+footer{
   background-color: var(--theme-olive);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border-top: 1px solid var(--theme-navy);
   /* grid-column: start-point / end-point; */
+ }
+ footer>p{
+  font-size: var(--font-regular);
  }
 
 @keyframes fadeInLeft {
