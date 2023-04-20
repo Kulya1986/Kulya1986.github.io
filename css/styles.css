@@ -498,4 +498,10 @@ footer{
   .intro-buttons > button{
     margin: 0rem 2rem;
   }
+  footer>p, .contacts__text p{
+    font-size: 1.4rem;
+   }
+   .contacts__social{
+    font-size: var(--font-large);
+   }
 }
