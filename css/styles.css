@@ -190,15 +190,20 @@ hr.intro-heading__bottom{
   margin: .7rem 0rem .7rem  auto;
 }
 .portfolio-projects{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: [start]repeat(4,[col-start] minmax(min-content, 28rem)[col-end])[end];
   background-color: var(--theme-light-gold);
   justify-content: center;
 }
+.portfolio-projects__top{
+  grid-column: start / end;
+ justify-self: center;
+}
 .portfolio-projects__grid{
   display: grid;
-  grid-template-columns: repeat(3,  minmax(400px, 1fr));
-  gap: 2rem;
+  grid-column: start / end;
+  grid-template-columns: repeat(auto-fit,400px);
+  gap: 1.5rem;
   justify-content: center;
   align-content: center;
   margin: 2rem .5rem;
@@ -236,7 +241,7 @@ hr.intro-heading__bottom{
  }
 .project__title{
   position: absolute;
-  width: 400px;
+  width: 380px;
   text-decoration: none;
   padding: 0rem 1rem;
   top: 5%;
@@ -332,7 +337,6 @@ footer{
   flex-wrap: wrap;
   justify-content: center;
   border-top: 1px solid var(--theme-navy);
-  /* grid-column: start-point / end-point; */
  }
  footer>p{
   font-size: var(--font-regular);
@@ -423,9 +427,75 @@ footer{
   }
 }
 
-@media (max-width: 768px) {
-  .intro-buttons > button {
-    padding: .75rem 3rem;
-    font-size: var(--font-small);
+@media (max-width: 1054px) {
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 985px) {
+  h1{
+    padding: 0rem;
+  }
+  h2{
+    padding: 2rem 1rem 0rem;
+  }
+  .intro-buttons > button{
+    max-width: 300px;
+    line-height: 1.25rem;
+    padding: .75rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  /* h3{
+    font-size: 1.2rem;
+  } */
+  .brief-cv-button{
+    max-width: 300px;
+    padding: .75rem 1.25rem;
+    font-size: 1rem;
+  }
+  .portfolio-projects__heading, .contacts__heading{
+    font-size: var(--font-regular);
+    line-height: 1.6rem;
+    padding: 1.5rem 2rem;
+    max-width: 380px;
+  }
+  .brief-cv-wrapper{
+    grid-template-columns: minmax(200px,1fr) 5fr;
+  }
+  .brief-cv-photo{
+    width: 10rem;
+    height: 10rem;
+    justify-self: center;
+  }
+  .intro-buttons > button:after, .brief-cv-button:after, .portfolio-projects__heading:after,.contacts__heading:after {
+    bottom: 4px;
+    left: 4px;
+  }
+}
+@media (max-width:800px) {
+  .intro{
+    background-image: url(../images/smalllogo.png);
+  }
+  .intro-heading{
+    margin-right: 0.2rem;
+  }
+  h1{
+    font-size: 2.7rem;
+  }
+  h2{
+    font-size: 1.7rem;
+  }
+}
+@media (max-width:700px) {
+  .intro{
+    background-image: none;
+    place-items: center center;
+  }
+  .intro-buttons > button{
+    margin: 0rem 2rem;
   }
 }
